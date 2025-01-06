@@ -12,10 +12,13 @@ const CountdownBox = ({ value, label }) => (
 );
 
 const Countdown = () => {
-  // Changed from 2 to 4 days
-  const [targetDate] = useState(new Date().getTime() + 4 * 24 * 60 * 60 * 1000);
+  // Set a 4-day target from when the app is deployed/built
+  const FOUR_DAYS_IN_MS = 4 * 24 * 60 * 60 * 1000;
+  const DEPLOY_TIME = new Date('2025-01-06T00:00:00Z').getTime(); // Set this to your deployment time
+  const TARGET_DATE = DEPLOY_TIME + FOUR_DAYS_IN_MS;
+
   const [timeLeft, setTimeLeft] = useState({
-    days: 0,
+    days: 4,
     hours: 0,
     minutes: 0,
     seconds: 0
@@ -24,7 +27,7 @@ const Countdown = () => {
   useEffect(() => {
     const calculateTimeLeft = () => {
       const currentTime = new Date().getTime();
-      const difference = targetDate - currentTime;
+      const difference = TARGET_DATE - currentTime;
 
       if (difference > 0) {
         const newTimeLeft = {
@@ -33,7 +36,6 @@ const Countdown = () => {
           minutes: Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60)),
           seconds: Math.floor((difference % (1000 * 60)) / 1000)
         };
-        console.log('Time remaining:', newTimeLeft);
         setTimeLeft(newTimeLeft);
       } else {
         setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
@@ -42,13 +44,8 @@ const Countdown = () => {
 
     calculateTimeLeft();
     const timer = setInterval(calculateTimeLeft, 1000);
-    console.log('Timer started');
-
-    return () => {
-      console.log('Timer cleared');
-      clearInterval(timer);
-    };
-  }, [targetDate]);
+    return () => clearInterval(timer);
+  }, []);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-blue-100 flex items-center justify-center p-4">
