@@ -1,7 +1,7 @@
 CodeCollab - Frontend
 🚀 Real-time code collaboration platform built with React and Socket.IO. Users can join coding rooms, edit together, and see updates live.
 
-FEATURES
+**FEATURES**
 
 ✅ Live code editing & synchronization
 
@@ -11,7 +11,7 @@ FEATURES
 
 ✅ Clean UI with CodeMirror/Monaco Editor
 
-TECH STACK
+**TECH STACK**
 
 React – Frontend framework
 
@@ -26,9 +26,9 @@ Tailwind CSS – Styling
 
 
 
-INSTALLATION AND SETUP
+**INSTALLATION AND SETUP**
 
-1️⃣ Clone the repository:
+1️⃣ *Clone the repository*:
 
 (sh)
 
@@ -37,14 +37,14 @@ git clone https://github.com/Rhonaiye/CodeCollab-Real-Time-Code-Collaboration-Fr
 cd codecollab-frontend
 
 
-2️⃣ Install dependencies:
+2️⃣ *Install dependencies*:
 
 (sh)
 
 npm install  
 
 
-3️⃣ Start the development server:
+3️⃣ *Start the development server*:
 
 (sh)
 
