@@ -1,10 +1,35 @@
-# React + Vite
+CodeCollab - Frontend
+🚀 Real-time code collaboration platform built with React and Socket.IO. Users can join coding rooms, edit together, and see updates live.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+FEATURES
+✅ Live code editing & synchronization
+✅ Join and leave rooms dynamically
+✅ Real-time user list updates
+✅ Clean UI with CodeMirror/Monaco Editor
 
-Currently, two official plugins are available:
+TECH STACK
+React – Frontend framework
+Socket.IO – Real-time WebSocket communication
+CodeMirror/Monaco Editor – Code editing
+Tailwind CSS – Styling
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-# Rentail-Web
-# Renatilz-site
+
+INSTALLATION AND SETUP
+1️⃣ Clone the repository:
+(sh)
+git clone https://github.com/yourusername/codecollab-frontend.git  
+cd codecollab-frontend
+
+
+2️⃣ Install dependencies:
+(sh)
+npm install  
+
+3️⃣ Start the development server:
+(sh)
+npm run dev 
+
+
+
+Feel free to open issues or submit pull requests!
+
